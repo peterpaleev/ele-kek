@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)https://covidasidogrulama.saglik.gov.tr/api/CovidAsiKartiDogrula?Guid=a37e2eb2-3e3d-4f74-9c7c-27c35a8705df -->
+<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Elektronik Aşı Takvimi Doğrulama</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="./index_files/eNabizMain.css" rel="stylesheet">
+    <link href="./index_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .BoxContent {
+            width: 50%;
+            margin: 7% auto;
+            position: relative;
+            background-color: #fff;
+            -webkit-box-shadow: 2px 2px 13px 0px rgba(0,0,0,.20);
+            -moz-box-shadow: 2px 2px 13px 0px rgba(0,0,0,.20);
+            box-shadow: 2px 2px 13px 0px rgba(0,0,0,.20);
+        }
+
+        .EnabizLogo {
+            padding: 15px;
+            height: 70px;
+            position: relative;
+            left: 0;
+            margin-bottom: 50px
+        }
+
+        @media (max-width: 991px) {
+            .BoxContent {
+                width: 100%;
+                margin: 0% auto;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .EnabizLogo {
+                margin-bottom: 0px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="BoxContent">
+        <img src="./index_files/enabiz-logo-giris.png" class="EnabizLogo">
+        <img src="./index_files/sb-logo-giris.png" style="position: absolute;right:0;height: 100px;">
+        <div class="clearfix"></div>
+        <div style="padding:50px;">
+                <p class="note note-success" style="line-height:30px;">
+                    Aşı kimliği 99189319492 TC kimlik numaralı DANIIL NIKOLOV isimli kişiye aittir. Bu kimlik 20.06.2022 tarihinde T.C. Sağlık Bakanlığı tarafından oluşturulmuştur.
+                    <br>
+                </p>
+                <br>
+                <p class="note note-success" style="line-height:30px;">
+                    The Vaccination ID belongs to DANIIL NIKOLOV with TR identity number 99189319492. This Vaccination ID was created on 06/20/2022 by the Ministry of Health of the Republic of Turkey.
+                    <br>
+                </p>
+            <div class="clearfix"></div>
+        </div>
+        <input id="text" type="text" value="https://hogangnono.com" style="width:80%" /><br />
+        <div id="qrcode"></div>
+    </div>
+    <div id="qrcode"></div>
+<script type="text/javascript">
+    var qrcode = new QRCode("qrcode");
+
+function makeCode () {    
+  var elText = document.getElementById("text");
+  
+  if (!elText.value) {
+    alert("Input a text");
+    elText.focus();
+    return;
+  }
+  
+  qrcode.makeCode(elText.value);
+}
+
+makeCode();
+
+$("#text").
+  on("blur", function () {
+    makeCode();
+  }).
+  on("keydown", function (e) {
+    if (e.keyCode == 13) {
+      makeCode();
+    }
+  });
+new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+
+
+var qrcode = new QRCode("test", {
+    text: "http://jindo.dev.naver.com/collie",
+    width: 128,
+    height: 128,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+</script>
+
+</body>
+</html>
