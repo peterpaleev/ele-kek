@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    width: 238px;
+    height: 92px;
+    background-image: url('/img/ele-logo.png');
+    background-size: cover;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.promo-wrapper {
+    display: flex;
+}
+
+.promo-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+}
+
+.promo-header {
+}
+
+.promo-text {
+}
