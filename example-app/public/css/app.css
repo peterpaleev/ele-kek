@@ -11,7 +11,7 @@ body {
 .navbar-logo {
     width: 238px;
     height: 92px;
-    background-image: url('/img/ele-logo.png');
+    background-image: url('/img/ele-logo.svg');
     background-size: cover;
 }
 
@@ -42,4 +42,31 @@ body {
 }
 
 .promo-text {
+}
+
+.home-header {
+    text-align: center;
+}
+
+.home-block-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px;
+}
+
+.home-block {
+    max-width: 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:white;
+    text-align: center;
+}
+
+.home-block:hover {
+    background-color: #0078d7;
+    color: white;
 }
